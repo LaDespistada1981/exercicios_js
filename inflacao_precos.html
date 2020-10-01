@@ -9,9 +9,10 @@
     <script>
 
         function pulaLinha() {
-            document.write("<br><br><br>");
+            document.write("<br><br>");
         }
         function mostra(frase) {
+            pulaLinha();
             document.write(frase);
             pulaLinha();
         }
@@ -28,10 +29,10 @@
             return mediaInflacao;
         }
 
-        function mediaDiaria (mediaInflacao, quantidadeDias) {
+        function mediaDiaria (inflacaoProduto, quantidadeDias) {
             
-            var mediaDiaria = (mediaInflacao/quantidadeDias);
-            return mediaDiaria;
+            var mediaDiaria = (inflacaoProduto/quantidadeDias);
+            return mediaDiariaInflacaoProduto;
         }
 
         var inflacaoTomate = inflacaoProduto(3.3, 4.70);
@@ -42,7 +43,10 @@
 
         var quantidadeDias = (30 - 24);
 
-        var mediaDiaria = (inflacaoMedia/ quantidadeDias);
+        var mediaDiariaInflacaoTomate = (inflacaoTomate/ quantidadeDias);
+        var mediaDiariaInflacaoArroz = (inflacaoArroz/ quantidadeDias);
+        var mediaDiariaInflacaoCenoura = (inflacaoCenoura/ quantidadeDias);
+        
 
 
         mostra("A inflação do preço do tomate entre 24/04 e 30/04 foi " + "R$ " + inflacaoTomate);
@@ -51,7 +55,11 @@
 
         mostra(" A inflação média no período entre 24/04 e 30/04 foi de " + "R$ " + inflacaoMedia);
         
-        mostra(" A inflação média diária no período entre 24/04 e 30/04 foi de " + "R$ " + mediaDiaria);
+        mostra(" A inflação média diária de inflação do tomate foi " + "R$ " + mediaDiariaInflacaoTomate);
+        mostra(" A inflação média diária de inflação do arroz foi " + "R$ " + mediaDiariaInflacaoArroz);
+        mostra(" A inflação média diária de inflação do cenoura foi " + "R$ " + mediaDiariaInflacaoCenoura);
+        
+
         
     </script>
     
