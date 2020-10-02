@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebedeira</title>
+</head>
+<body>
+    <h2>Bebedeira - Atividade 5</h2>
+    <p>
+        Crie uma função que recebe 2 parâmetros: a idade do usuário e a idade em que é permitido beber em algum país. 
+        Essa função deve retornar o texto "você pode beber" caso a idade do usuário seja maior ou igual a estabelecida 
+        para consumo de bebidas alcoólicas no país e "você não pode beber" caso contrário. Utilize document.write para 
+        escrever na tela o resultado desta função com os parâmetros a sua escolha. Teste todas as saídas possíveis. 
+    </p>
+
+    <script>
+
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            pulaLinha();
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function podeBeber(idade, idadePermitida) {
+            if(idade >= idadePermitida) {
+                return ("Você pode beber!" + "<br><br>" + "*As leis brasileiras permitem o consumo de bebidas alcoólicas a maiores de 18 anos.");
+            } else {
+                return ("Você não pode beber!" + "<br><br>" + "*As leis brasileiras somente permitem o consumo de bebidas alcoólicas a maiores de 18 anos.");
+            }
+        } 
+
+        var idade = prompt("Qual a sua idade?");
+
+        var idadePermitida = 18;
+
+        mostra(podeBeber(idade, idadePermitida));
+
+    </script>
+</body>
+</html>

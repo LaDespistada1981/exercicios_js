@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenando Strings</title>
+</head>
+
+<body>
+    <h2>Concatenando Strings - Atividade 1</h2>
+    
+    <p> Crie uma função que recebe como parâmetro duas strings. Essa função deve
+        retornar as duas strings concatenadas ("juntadas") separadas por um espaço. Utilize
+        document.write para escrever na tela o resultado desta função com os parâmetros de teste "Olá"
+        e "Mundo!"
+    </p>
+
+    <script>
+
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            pulaLinha();
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function concatena(str1, str2) {
+            return (str1 + str2);
+        }
+
+        var str1 = "Olá, ";
+        var str2 = "Mundo!";
+
+        mostra(concatena(str1,str2));
+
+    </script>
+</body>
+</html>
