@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibindo o menu e pegando a resposta do usuário</title>
+</head>
+<body>
+    <h2>Atividade 8</h2>
+
+    <script>
+
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            pulaLinha();
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function escolha(refrigerante, suco, agua) {
+            if(menuBebida == bebida1) {
+                return ("Recebemos seu pedido de refrigerante.");
+            } if(menuBebida == bebida2) {
+                return ("Recebemos seu pedido de suco.");
+            } if(menuBebida == bebida3) {
+                return ("Recebemos seu pedido de agua.");
+            } else {
+                return ("Por favor, escolha entre as bebidas disponíveis no menu!");
+            }
+        }
+        
+        var menuBebida = prompt("Por favor, escolha sua bebida! Temos refrigerante, suco e agua.");
+        
+        var bebida1 = "refigerante";
+        var bebida2 = "suco";
+        var bebida3 = "agua";
+
+        mostra(escolha(bebida1, bebida2, bebida3));
+
+    </script>
+</body>
+</html>
