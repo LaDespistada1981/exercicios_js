@@ -6,14 +6,9 @@
     <title>O motorista</title>
 </head>
 <body>
-    <h2>O motorista - Atividade 4</h2>
-    <p>
-        Crie uma função que recebe 2 parâmetros: a idade do usuário e a idade em que é
-        permitido dirigir em algum país. Essa função deve retornar o texto "você pode dirigir" caso a
-        idade do usuário seja maior ou igual a estabelecida para direção no país e "você não pode
-        dirigir" caso contrário. Utilize document.write para escrever na tela o resultado desta função com
-        os parâmetros a sua escolha. Teste todas as saídas possíveis.
-    </p>
+    <center>
+        <h2>O motorista - Atividade 4</h2>
+    </center>
 
     <script>
 
@@ -28,18 +23,22 @@
         }
 
         function podeDirigir(idade, idadePermitida) {
-            if(idade >= idadePermitida) {
-                return ("Você pode dirigir!");
+
+            if(idadeUsuario >= idadePermitidaBrasil) {
+
+                return ("<h1><center>Você pode dirigir no Brasil!<center><h1>");
+
             } else {
-                return ("Você não pode dirigir!");
+
+                return ("<h1><center>Você não pode dirigir no Brasil!<center><h1>");
             }
         }
 
-        var idade = prompt("Qual a sua idade?");
+        var idadeUsuario = prompt("Qual a sua idade?");
 
-        var idadePermitida = 18;
+        var idadePermitidaBrasil = 18;
 
-        mostra(podeDirigir(idade, idadePermitida));
+        mostra(podeDirigir(idadeUsuario, idadePermitidaBrasil));
 
     </script>
 </body>

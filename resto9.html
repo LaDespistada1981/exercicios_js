@@ -6,13 +6,10 @@
     <title>Resta 9</title>
 </head>
 <body>
-    <h2>Resto 9 - Atividade 3</h2>
-    <p>
-        Crie uma função que recebe como parâmetro um número. Essa função deve retornar o
-        texto "O resto de {numero} divididos por 9 é: {resto da divisão}". Utilize document.write para
-        escrever na tela o resultado desta função com os parâmetros a sua escolha.
-        
-    </p>
+    <center>
+        <h2>Resto 9 - Atividade 3</h2>
+    </center>
+    
     <script>
 
         function pulaLinha() {
@@ -26,12 +23,13 @@
         }
 
         function recebeNumero(n) {
-            return (" O resto de " + n + " dividido por 9 é: " + resto9 );
+
+            return ("<center><h1>O resto de " + n + " dividido por 9 é: " + resto9 + "</h1></center>");
         }
 
         var n = prompt("Informe um número diferente de 0:");
 
-        var resto9 = (n%9);
+        var resto9 = (n % 9);
 
         mostra(recebeNumero(n));
 

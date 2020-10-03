@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semáforo</title>
+    <title>Atividade 7 - Exibindo Menu Bebidas</title>
 </head>
 <body>
-    <h2>Exibindo o menu - Atividade 7</h2>
-    <p>
-        Exibindo o menu: faça uma função que exibe o menu de bebidas de um restaurante (utilizando document.write), 
-        com um item em cada linha: 1-Refrigerante, 2-Suco, 3-Água. 
-
+    <center>
+        <h2>Atividade 7</h2>
+    </center>
+    
     <script>
 
         function pulaLinha() {
@@ -18,12 +17,15 @@
         }
 
         function mostra(frase) {
-            pulaLinha();
             document.write(frase);
             pulaLinha();
         }
 
-        mostra("<h1>")
+        function exibeMenu() {
+            return ("<h1>Menu - Bebidas</h1> \n <p>1 - Refrigerante</p><p>2 - Suco</p><p>3 - Água</p>");
+        }
+
+        mostra(exibeMenu());
 
     </script>
 </body>

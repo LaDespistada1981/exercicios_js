@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exibindo o menu e pegando a resposta do usuário</title>
+    <title>Atividade 9 - Exibindo o menu e pegando a resposta do usuário</title>
 </head>
 <body>
-    <center><h2>Atividade 9</h2></center>
+    <center>
+        <h2>Atividade 9</h2>
+    </center>
 
     <script>
 
@@ -15,30 +17,31 @@
         }
 
         function mostra(frase) {
-            pulaLinha();
             document.write(frase);
             pulaLinha();
         }
 
-        function escolha(refrigerante, suco, agua) {
-            if(menuBebida == bebida1) {
-                return ("Recebemos seu pedido de refrigerante.");
-            } else if(menuBebida == bebida2) {
-                return ("Recebemos seu pedido de suco.");
-            } else if(menuBebida == bebida3) {
-                return ("Recebemos seu pedido de agua.");
-            } else {
-                return ("Por favor, escolha entre as bebidas disponíveis no menu!");
-            }
+        function exibeMenu() {
+            return ("<h1>Menu - Bebidas</h1> \n <h3><p>1 - Refrigerante</p><p>2 - Suco</p><p>3 - Água</p></h3>");
         }
-        
-        var menuBebida = prompt("Por favor, escolha sua bebida. Temos refrigerante, suco e agua.");
-        
-        var bebida1 = "refigerante";
-        var bebida2 = "suco";
-        var bebida3 = "agua";
 
-        mostra(escolha(bebida1, bebida2, bebida3));
+        mostra(exibeMenu());
+
+        var menuBebida = prompt("Por favor, escolha sua bebida: \n 1- Refrigerante. \n 2-Suco. \n 3- Água.");
+        
+        if (menuBebida == 1) {
+
+            mostra ("<center><h1 style=color:blue>REFRIGERANTE</h1></center>");
+
+        } else if (menuBebida == 2) {
+
+            mostra("<center><h1 style=color:blue>SUCO</h1></center>");
+
+        } else if (menuBebida == 3) {
+
+            mostra("<center><h1 style=color:blue>ÁGUA</h1></center>");
+
+        } else mostra("<center style=color:blue><h1>ESCOLHA APENAS OS ITENS DO MENU!</h1></center>");
 
     </script>
 </body>
