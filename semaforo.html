@@ -6,13 +6,10 @@
     <title>Semáforo</title>
 </head>
 <body>
-    <h2>Semáforo - Atividade 6</h2>
-    <p>
-        Faça uma função que recebe como parâmetro as strings "verde", "amarelo" ou
-        "vermelho". Caso o parâmetro passado seja "verde", a função deve retornar "pode passar!", caso
-        seja "amarelo", retorna "melhor freiar", caso seja "vermelhor", "pare já!". Utilize document.write
-        para escrever na tela o resultado desta função com os parâmetros a sua escolha. Teste todas as
-        saídas possíveis.
+    <center>
+        <h1>Semáforo - Atividade 6</h1>
+    </center> 
+    
 
     <script>
 
@@ -26,25 +23,21 @@
             pulaLinha();
         }
 
-        function sinalizar(verde, amarelo, vermelho) {
-            if(escolhaCor == cor1) {
-                return ("Vc pode passar!");
-            } if(escolhaCor == cor2) {
-                return ("É melhor freiar!");
-            } if(escolhaCor == cor3) {
-                return ("Pare já!");
-            } else {
-                return ("Cor não encontrada!");
-            }
+        function sinalizar(cor) {
+            if(cor == "verde") {
+                return ("<center><h1 style=color:lightgreen>Você pode passar!</style></center><h1>");
+
+            } else if (cor == "amarelo") {
+                return ("<center><h1 style=color:#e4bf06>É melhor freiar!</center><h1>");
+
+            } if (cor == "vermelho"); {
+                return ("<center><h1 style=color:red>Pare já!<h1></center>");
+            } 
         }
         
-        var escolhaCor = prompt("Escolha uma cor entre verde, amarelo e vermelho: ");
-        
-        var cor1 = "verde";
-        var cor2 = "amarelo";
-        var cor3 = "vermelho";
+        var cor = prompt("Escolha uma cor entre verde, amarelo e vermelho: ");
 
-        mostra (sinalizar(cor1, cor2, cor3));
+        mostra (sinalizar(cor));
 
     </script>
 </body>

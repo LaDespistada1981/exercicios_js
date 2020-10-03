@@ -14,38 +14,44 @@
         fornecerá para você a quantidade de laranjas que ele tem e quantos vizinhos entrarão no rateio.
     </p>
 
+    <h3>Problema 2 - A sobra das laranjas</h3>
+    <p>
+        Após a divisão das laranjas, Joselito quer saber quantas laranjas restarão para ele. Para isso, ele<br>
+        continuará fornecendo a quantidade de laranjas que ele possui e quantos vizinhos participarão da divisão.
+    </p>
+
     <script>
 
         function pulaLinha() {
-            document.write("<br><br>");
+            document.write("<br>");
         }
 
 
         function exibeNaTela(resultado) {
-            document.write(resultado);
             pulaLinha();
+            document.write(resultado);
         }
 
+        function divideLaranjas(laranjas, vizinhos) {
+            return Math.trunc(laranjas/vizinhos);
+        }
 
-        function divisaoLaranjas(laranjas, vizinhos) {
-            return (laranjas/vizinhos);
+        function sobraLaranjas(laranjas, vizinhos) {
+            return Math.trunc(laranjas%vizinhos);
         }
 
 
         var quantLaranjas = prompt("Informe a quantidade de laranjas para a divisão:");
         var quantVizinhos = prompt("Informe a quantidade de vizinhos que entrará no rateio:");
 
-        var rateio = divisaoLaranjas(quantLaranjas, quantVizinhos);
+        var rateio = divideLaranjas(quantLaranjas, quantVizinhos);
 
-        exibeNaTela("Cada vizinho deve receber " + rateio + " laranjas.");
+        var sobra = sobraLaranjas(quantLaranjas, quantVizinhos);
+
+        exibeNaTela("<h1>Cada vizinho deve receber " + rateio + " laranjas.</h1>");
+        exibeNaTela("<h1>Sobra " + sobra + " laranjas.</h1>");
 
     </script>
 
-
-    <h3>Problema 2 - A sobra das laranjas</h3>
-    <p>
-        Após a divisão das laranjas, Joselito quer saber quantas laranjas restarão para ele. Para isso, ele<br>
-        continuará fornecendo a quantidade de laranjas que ele possui e quantos vizinhos participarão da divisão.
-    </p>
 </body>
 </html>

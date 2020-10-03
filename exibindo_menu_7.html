@@ -8,11 +8,8 @@
 <body>
     <h2>Exibindo o menu - Atividade 7</h2>
     <p>
-        Faça uma função que recebe como parâmetro as strings "verde", "amarelo" ou
-        "vermelho". Caso o parâmetro passado seja "verde", a função deve retornar "pode passar!", caso
-        seja "amarelo", retorna "melhor freiar", caso seja "vermelhor", "pare já!". Utilize document.write
-        para escrever na tela o resultado desta função com os parâmetros a sua escolha. Teste todas as
-        saídas possíveis.
+        Exibindo o menu: faça uma função que exibe o menu de bebidas de um restaurante (utilizando document.write), 
+        com um item em cada linha: 1-Refrigerante, 2-Suco, 3-Água. 
 
     <script>
 
@@ -26,25 +23,7 @@
             pulaLinha();
         }
 
-        function sinalizar(verde, amarelo, vermelho) {
-            if(escolhaCor == cor1) {
-                return ("Vc pode passar!");
-            } if(escolhaCor == cor2) {
-                return ("É melhor freiar!");
-            } if(escolhaCor == cor3) {
-                return ("Pare já!");
-            } else {
-                return ("Cor não encontrada!");
-            }
-        }
-        
-        var escolhaCor = prompt("Escolha uma cor entre verde, amarelo e vermelho: ");
-        
-        var cor1 = "verde";
-        var cor2 = "amarelo";
-        var cor3 = "vermelho";
-
-        mostra (sinalizar(cor1, cor2, cor3));
+        mostra("<h1>")
 
     </script>
 </body>
