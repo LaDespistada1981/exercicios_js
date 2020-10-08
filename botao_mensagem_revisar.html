@@ -11,23 +11,22 @@
     <button id="tudo">Tudo, </button>
     <button id="bem">bem?</button>
 
-    
     <script>
-    
+
     var mensagem = ["Salve", "Galera", "Tudo", "Bem"];
 
     var button = document.querySelector("button");
-    button.onclick = alertaMensagem;
 
-    while ()
+    
 
-    function alertaMensagem() {
-        for (var posicao = 0; posicao < mensagem.length; posicao++) {
-        if (button.onclick == alertaMensagem) {
-            alert(mensagem[posicao]);
-        }
+    var posicao = 0;
+
+    while  (posicao < mensagem.length) {
+        var alertaMensagem = alert(mensagem[posicao])
+        posicao++
     }
-    }
+    
+    button.onclick = alert(mensagem[posicao]);
 
     </script>
 
