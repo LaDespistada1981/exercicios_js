@@ -5,74 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinte Botões</title>
 </head>
-    <style>
-        body {
-            font: normal 12pt Arial;
-        }
-
-        button {
-            margin-bottom: 10px;
-            margin-left: 30px;
-        }
-    </style>
+<style>
+    body {
+        font: normal 12pt Arial;
+    }
+    
+    input {
+        background-color: #dc143c;
+        display: flex;
+        justify-content: center;
+        width: 10%;
+        height: 5%;
+        border-radius: 5px;
+    }
+    
+    button {
+        background: #a8f060;
+        display: flex;
+        justify-content: center;
+        width: 10%;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 5px;
+    }
+</style>
 <body>
-
+    
     <div id="botaoArea">
-
-        <button class="botao"><p>Botão 00</p></button><br>
-        <button class="botao"><p>Botão 01</p></button><br>
-        <button class="botao"><p>Botão 02</p></button><br>
-        <button class="botao"><p>Botão 03</p></button><br>
-        <button class="botao"><p>Botão 04</p></button><br>
-        <button class="botao"><p>Botão 05</p></button><br>
-        <button class="botao"><p>Botão 06</p></button><br>
-        <button class="botao"><p>Botão 07</p></button><br>
-        <button class="botao"><p>Botão 08</p></button><br>
-        <button class="botao"><p>Botão 09</p></button><br>
-        <button class="botao"><p>Botão 10</p></button><br>
-        <button class="botao"><p>Botão 11</p></button><br>
-        <button class="botao"><p>Botão 12</p></button><br>
-        <button class="botao"><p>Botão 13</p></button><br>
-        <button class="botao"><p>Botão 14</p></button><br>
-        <button class="botao"><p>Botão 15</p></button><br>
-        <button class="botao"><p>Botão 16</p></button><br>
-        <button class="botao"><p>Botão 17</p></button><br>
-        <button class="botao"><p>Botão 18</p></button><br>
-        <button class="botao"><p>Botão 19</p></button><br>
-
+        <input type="button" onclick="criarBotao()" value="Criar Botão">
+        <br>
     </div>
-
-
+    
     <script>
 
-        var btn = document.querySelector('.botao')
-        btn.addEventListener('mouseenter', entrar)
-
-        function entrar() {
-            btn.style.background = 'blue'
-            btn.style.color = 'white'
-            btn.style.width = '100px'
-            btn.style.height = '50px'
+        function criarBotao() {
+            
+            var array = document.getElementById('botaoArea')
+            
+            for (var i = 0; i < 20; i++) {
+                var btn = document.createElement('button')
+                btn.appendChild(document.createTextNode(`Botão ${i}`))
+                array.appendChild(btn)
+            }
         }
-
-        // var num = 0
-        // while(num <= 20) {
-        //     var num = num += 1
-        // }
         
-        // var nomeBotao = [('Botao' ${num})]
-
-        // function criaBotao() {
-        //     for (var i = 0; i < 20; i++) {
-
-        //         document.write(`<button onclick = "alert('`+ messagemArray[i]+`')">` + messagemArray[i] + `</button>` + `<br>`)
-        //     }
-        // }
-        // criaBotao();
-
-        
-
-
     </script>
+    
 </body>
 </html>
