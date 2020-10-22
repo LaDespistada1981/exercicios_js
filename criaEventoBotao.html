@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionando Eventos a um Elemento</title>
+</head>
+<body>
+   
+    <script>
+        
+        function criaBotao() {
+            var btn = document.createElement('button')
+            btn.appendChild(document.createTextNode('Eventos com Mouse'))
+            
+            return btn
+        }
+        document.body.appendChild(criaBotao())
+
+
+        var botao = document.querySelector('button')
+        botao.style.width = '200px'
+        botao.style.height = '200px'
+        botao.style.fontSize = '20pt'
+        
+
+        function sobreBotao() {
+            botao.innerHTML = 'Você está com o mouse sobre o botão!'
+            botao.style.width = '200px'
+            botao.style.height = '200px'
+            botao.style.background = '#f82169'
+            botao.style.color = 'white'
+        }
+        botao.addEventListener('mouseover', sobreBotao)
+
+
+        function foraBotao() {
+            botao.innerHTML = 'Você está fora do botão!'
+            botao.style.width = '200px'
+            botao.style.height = '200px'
+            botao.style.background = '#7b1aeb'
+        }
+        botao.addEventListener('mouseout', foraBotao)
+
+
+        function clicarBotao() {
+            botao.innerHTML = 'Você clicou no botão!'
+            botao.style.width = '200px'
+            botao.style.height = '200px'
+            botao.style.background = '#ceaf01'
+        }
+        botao.addEventListener('click', clicarBotao);
+
+
+        function desClica() {
+            botao.innerHTML = 'Você soltou o click! Você está com o mouse sobre o botão!'
+            botao.style.width = '200px'
+            botao.style.height = '200px'
+            botao.style.background = '#86d313'
+            
+        }
+        botao.addEventListener('mouseup', desClica)
+
+    </script>
+</body>
+</html>
