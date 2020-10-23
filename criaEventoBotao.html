@@ -26,8 +26,6 @@
 
         function sobreBotao() {
             botao.innerHTML = 'Você está com o mouse sobre o botão!'
-            botao.style.width = '200px'
-            botao.style.height = '200px'
             botao.style.background = '#f82169'
             botao.style.color = 'white'
         }
@@ -36,8 +34,6 @@
 
         function foraBotao() {
             botao.innerHTML = 'Você está fora do botão!'
-            botao.style.width = '200px'
-            botao.style.height = '200px'
             botao.style.background = '#7b1aeb'
         }
         botao.addEventListener('mouseout', foraBotao)
@@ -45,19 +41,14 @@
 
         function clicarBotao() {
             botao.innerHTML = 'Você clicou no botão!'
-            botao.style.width = '200px'
-            botao.style.height = '200px'
             botao.style.background = '#ceaf01'
         }
-        botao.addEventListener('click', clicarBotao);
+        botao.addEventListener('mousedown', clicarBotao);
 
 
         function desClica() {
             botao.innerHTML = 'Você soltou o click! Você está com o mouse sobre o botão!'
-            botao.style.width = '200px'
-            botao.style.height = '200px'
             botao.style.background = '#86d313'
-            
         }
         botao.addEventListener('mouseup', desClica)
 
