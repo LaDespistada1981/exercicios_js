@@ -9,48 +9,47 @@
    
     <script>
         
-        function criaBotao() {
+        function criaBtn() {
             var btn = document.createElement('button')
             btn.appendChild(document.createTextNode('Eventos com Mouse'))
             
             return btn
         }
-        document.body.appendChild(criaBotao())
-
-
-        var botao = document.querySelector('button')
-        botao.style.width = '200px'
-        botao.style.height = '200px'
-        botao.style.fontSize = '20pt'
+        document.body.appendChild(criaBtn())
+        
+        
+        btn.style.width = '200px'
+        btn.style.height = '200px'
+        btn.style.fontSize = '20pt'
         
 
-        function sobreBotao() {
-            botao.innerHTML = 'Você está com o mouse sobre o botão!'
-            botao.style.background = '#f82169'
-            botao.style.color = 'white'
+        function sobreBtn() {
+            btn.innerHTML = 'Você está com o mouse sobre o botão!'
+            btn.style.background = '#f82169'
+            btn.style.color = 'white'
         }
-        botao.addEventListener('mouseover', sobreBotao)
+        btn.addEventListener('mouseover', sobreBtn)
 
 
-        function foraBotao() {
-            botao.innerHTML = 'Você está fora do botão!'
-            botao.style.background = '#7b1aeb'
+        function foraBtn() {
+            btn.innerHTML = 'Você está fora do botão!'
+            btn.style.background = '#7b1aeb'
         }
-        botao.addEventListener('mouseout', foraBotao)
+        btn.addEventListener('mouseout', foraBtn)
 
 
-        function clicarBotao() {
-            botao.innerHTML = 'Você clicou no botão!'
-            botao.style.background = '#ceaf01'
+        function clicarBtn() {
+            btn.innerHTML = 'Você clicou no botão!'
+            btn.style.background = '#ceaf01'
         }
-        botao.addEventListener('mousedown', clicarBotao);
+        btn.addEventListener('mousedown', clicarBtn)
 
 
         function desClica() {
-            botao.innerHTML = 'Você soltou o click! Você está com o mouse sobre o botão!'
-            botao.style.background = '#86d313'
+            btn.innerHTML = 'Você soltou o click! Você está com o mouse sobre o botão!'
+            btn.style.background = '#86d313'
         }
-        botao.addEventListener('mouseup', desClica)
+        btn.addEventListener('mouseup', desClica)
 
     </script>
 </body>
