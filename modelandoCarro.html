@@ -37,6 +37,25 @@
         console.log(carro.andar)
         console.log(carro.acelerar)
         console.log(carro['frear'])
+
+        let sinal = {
+            luzes: ['verde', 'amarela', 'vermelha'],
+
+            acender: function() {
+                if (sinal.luzes[0]) {
+                    console.log('Sinal verde, prossiga!');
+
+                } if (sinal.luzes[1]) {
+                    console.log('Atenção, sinal amarelo!');
+
+                }if (sinal.luzes[2]) {
+                    console.log('Sinal vermelho! Pare imediatamente!')
+                }
+            }
+        }
+
+        console.log(sinal.luzes);
+        console.log(sinal.luzes[2]);
     </script>
 </body>
 </html>

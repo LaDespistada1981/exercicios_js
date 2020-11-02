@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js"></script>
     <title>Vinte Botões</title>
 </head>
 <style>
@@ -36,21 +37,6 @@
         <input type="button" onclick="criarBotao()" value="Criar Botão">
         <br>
     </div>
-    
-    <script>
 
-        function criarBotao() {
-            
-            var array = document.getElementById('botaoArea')
-            
-            for (var i = 0; i < 20; i++) {
-                var btn = document.createElement('button')
-                btn.appendChild(document.createTextNode(`Botão ${i}`))
-                array.appendChild(btn)
-            }
-        }
-        
-    </script>
-    
 </body>
 </html>
