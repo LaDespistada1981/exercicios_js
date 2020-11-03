@@ -1,0 +1,24 @@
+
+function pulaLinha() {
+    document.write("<br><br>");
+}
+
+function mostra(frase) {
+    pulaLinha();
+    document.write(frase);
+    pulaLinha();
+}
+
+function podeBeber(idade, idadePermitida) {
+    if(idade >= idadePermitida) {
+        return ("<center><h1 style=color:lightgreen>Você pode beber!</center></h1>" + "<br><br>" + "<center><h3>*As leis brasileiras permitem o consumo de bebidas alcoólicas a maiores de 18 anos.</h3></center>");
+    } else {
+        return ("<center><h1 style=color:red >Você não pode beber!</h1></center>" + "<br><br>" + "<center><h3>*As leis brasileiras somente permitem o consumo de bebidas alcoólicas a maiores de 18 anos.</h3></center>");
+    }
+} 
+
+var idade = prompt("Qual a sua idade?");
+
+var idadePermitida = 18;
+
+mostra(podeBeber(idade, idadePermitida));
