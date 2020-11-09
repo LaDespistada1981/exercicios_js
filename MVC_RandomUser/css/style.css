@@ -1,0 +1,40 @@
+* {
+    font-family: 'Trispace', sans-serif;
+}
+
+.container {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+}
+
+#imagem {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#name {
+    color: white;
+    font-size: 20pt;
+    font-weight: 700;
+}
+
+#gender {
+    color: #79bd15;
+    font-size: 18pt;
+}
+
+#req {
+    width: 100px;
+    height: 30px;
+    border-radius: 6px;
+}
+
+

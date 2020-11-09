@@ -9,7 +9,7 @@ class ViraLata
         if(numeroDePatas !== undefined) {
             this.patas = numeroDePatas
         }
-        
+
         if(numeroDeOrelhas !== undefined) {
             this.orelhas = numeroDeOrelhas
         }
@@ -36,6 +36,19 @@ class ViraLata
     }
 }
 
+let cachorro = new ViraLata()
+
 let cachorroRobertinha = new ViraLata(2, 2, 'curto');
 
-cachorro.latir();
+cachorroRobertinha.latir();
+
+cachorroRobertinha.cheirar();
+
+cachorroRobertinha.tosar();
+
+console.log(cachorroRobertinha);
+
+console.log(cachorroRobertinha.latir())
+console.log(cachorroRobertinha.cheirar())
+console.log(cachorroRobertinha.tosar())
+console.log(cachorro)
