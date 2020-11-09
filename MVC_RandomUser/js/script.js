@@ -1,10 +1,3 @@
-//Criar um objeto;
-//Criar um botão que chama o objeto criado, 
-//Mostrar na tela os dados do objeto: gender;name;
-
-//segunda etapa: 
-//buscar esses dados da API e exibir na tela para o usuário
-
 class UserModel
 {
     constructor()
@@ -22,7 +15,7 @@ class UserModel
         
         request.addEventListener('load', () =>
         {
-            if (request.status == 200) 
+            if (request.status == 200)
             {
                 let dados = this._processaResponse (request.responseText)
 
