@@ -66,8 +66,7 @@ class UserView
 
     renderView (model)
     {
-        let botao = document.querySelector('#req')
-        
+        let botao = document.querySelector('#req');
     
         let imagem = document.querySelector("#imagem");
 
@@ -100,4 +99,3 @@ class UserController
 let controller = new UserController()
 
 req.addEventListener('click', controller.adicionaPerfil)
-    

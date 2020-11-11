@@ -1,0 +1,34 @@
+.container {
+    background-color: #57c01a;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height:500px;
+    margin: 50px auto;
+    border-radius: 10%;
+    border: black solid 5px;
+}
+
+#req {
+    background-color: #21520b;
+    color: white;
+    border: white;
+    border-width: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: large;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 350px;
+}
+
+#req:hover {
+    border: 5px solid white;
+    transform: scale(1.5);
+    transition: 0.5s;
+}
