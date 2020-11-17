@@ -2,30 +2,27 @@ let imagem = document.querySelector('#poke');
 
 let nome = document.querySelector('#name');
 
-let botao = document.getElementById('#req');
+let botao = document.querySelector('#req');
 
-botao.addEventListener('click', () =>
+botao.addEventListener('click', function()
 {
+    let request = new XMLHttpRequest();
     let contador = 1;
-    contador++
-
-    let request = new XMLHttpRequest;
+    contador = contador +=1
+    console.log(contador)
     
-    request.open('GET','https://pokeapi.co/api/v2/pokemon/1', false )
+    request.open('GET', `https://pokeapi.co/api/v2/pokemon/${contador}`)
     
-    
-    request.addEventListener('load', () =>
+    request.addEventListener('load', function()
     {
         if (request.status == 200)
         {
-            let dados = JSON.parse(this.responseText);
-            
-            imagem.src = dados.results[0].url;
+            let response = JSON.parse(this.responseText)
 
-            nome.textContent = dados.results[0].name;
+            imagem.src = response.results.url;
+
+            nome.textContent = response.results.name;
         }
-        document.body.appendChild('.container');
     })
-
     request.send()
-}
+})
